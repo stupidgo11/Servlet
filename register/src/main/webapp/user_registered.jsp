@@ -20,7 +20,7 @@
 </c:if>
 <c:if test="${message==null}">
     <c:forEach items="${courseRegistered.history}" var="entry">
-        <h3> ${semester[entry.value]}</h3><hr>
+        <h3> ${semester[entry.key]}</h3><hr>
         <c:forEach items="${entry.value}" var="subject">
             ${subject.subjectId}, ${subject.title}, ${subject.credit}<br>
         </c:forEach>
