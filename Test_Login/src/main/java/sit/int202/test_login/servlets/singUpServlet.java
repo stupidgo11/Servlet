@@ -21,7 +21,7 @@ public class singUpServlet extends HttpServlet {
         String pass = request.getParameter("Password");
         HttpSession session = request.getSession();
         if(name.length() == 0 || email.length() == 0 || user.length() == 0 || pass.length() == 0){
-            request.setAttribute("message","ใส่ข้อมูลให้ครบด้วยหน้าหี");
+            request.setAttribute("message","Enter all information please");
             request.getRequestDispatcher("singup.jsp").forward(request,response);
         }else {
                 session.setAttribute("name" , name);
