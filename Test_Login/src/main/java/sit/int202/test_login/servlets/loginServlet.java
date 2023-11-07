@@ -19,7 +19,7 @@ public class loginServlet extends HttpServlet {
         String pass = request.getParameter("Password");
         HttpSession session = request.getSession(false);
         if (user.length() == 0 || pass.length() == 0) {
-            request.setAttribute("messageLog", "ใส่ข้อมูลให้ครบหน้าหี");
+            request.setAttribute("messageLog", "Enter all information please!!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
         else if (session != null) {
@@ -29,14 +29,14 @@ public class loginServlet extends HttpServlet {
                 if (sessionUser.equals(user) && sessionPass.equals(pass)) {
                     request.getRequestDispatcher("index.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("messageLog", "ใส่ข้อมูลให้ถูกด้วยหน้าหี");
+                    request.setAttribute("messageLog", "Enter Correct information please!!");
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
             }
-            request.setAttribute("messageLog", "ไปลงทะเบียนก่อนหน้าหีหน้าหี");
+            request.setAttribute("messageLog", "Sign up first!!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else {
-            request.setAttribute("messageLog", "ไปลงทะเบียนก่อนหน้าหีหน้าหี");
+            request.setAttribute("messageLog", "Sign up first!!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
