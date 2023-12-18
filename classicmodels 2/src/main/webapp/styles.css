@@ -1,0 +1,16 @@
+.right {
+    float: right;
+}
+.bg-self {
+    background-color: rosybrown;
+    color: aliceblue;
+}
+.text-self{
+    color: rosybrown;
+}
+.text-ch{
+    color: black;
+}
+.bg-ch{
+    background-color: beige;
+}
